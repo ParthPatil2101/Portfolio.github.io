@@ -3,89 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parth's Portfolio</title>
+    <title>Parth Patil - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Accessibility: Ensure Text-to-Speech and Other Improvements -->
+    <meta name="description" content="Parth Patil’s portfolio showcasing his work on the DaaCure Hospital Management System project, skills, and achievements.">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <!-- Hero Section -->
+    <header class="hero" role="banner">
+        <img src="images/hero-banner.jpg" alt="Hospital Management System" class="hero-img">
         <h1>Parth's Portfolio</h1>
-        <p>Welcome to my personal portfolio showcasing my skills, projects, and experience.</p>
+        <p class="lead">Engineer | Developer | Innovator</p>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main Content Section -->
     <div class="container">
-        <!-- Home Section -->
-        <section id="home" data-aos="fade-up">
+        <!-- Introduction Section -->
+        <section id="introduction" data-aos="fade-up" tabindex="0">
             <h2>Hey, I'm Parth Patil</h2>
-            <p>I'm currently pursuing a Bachelor of Engineering in Computer Science at KLE Technological University Belgaum. This portfolio showcases my work on the "DaaCure – Hospital Management System" project.</p>
+            <p>I'm pursuing a Bachelor of Engineering in Computer Science at KLE Technological University Belgaum. Explore my work on the <strong>DaaCure – Hospital Management System</strong>.</p>
         </section>
 
-        <!-- About Section -->
-        <section id="about" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>I am passionate about technology and problem-solving. With a strong foundation in algorithms, data structures, and system design, I aim to create efficient, scalable, and user-friendly solutions. I am always eager to learn new concepts and explore the latest trends in the tech industry.</p>
+        <!-- Projects Section -->
+        <section id="projects" data-aos="fade-up" tabindex="0">
+            <h2>My Projects</h2>
+            <div class="projects-list">
+                <div class="project-card">
+                    <img src="images/daacure.jpg" alt="DaaCure Project" class="project-img">
+                    <h3><a href="projects/daacure-details.html">DaaCure – Hospital Management System</a></h3>
+                    <p>Optimizing patient care, doctor scheduling, emergency response, and resource allocation in hospitals.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" data-aos="fade-up">
+        <section id="skills" data-aos="fade-up" tabindex="0">
             <h2>Skills</h2>
             <ul>
                 <li>Algorithm Design</li>
                 <li>Data Structures</li>
                 <li>Time and Space Complexity Analysis</li>
-                <li>Programming: C++</li>
-                <li>System Design and Optimization</li>
+                <li>Programming: C++, Python</li>
+                <li>System Design & Optimization</li>
             </ul>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" data-aos="fade-up">
-            <h2>Projects</h2>
-            <p><strong>Project Title:</strong> DaaCure – Hospital Management System</p>
-            <p><strong>Description:</strong> The DaaCure project is a smart, all-in-one hospital management system designed to make healthcare operations smoother, improve patient care, and ensure resources are used wisely. It brings together everything a hospital needs into one easy-to-use platform, helping staff focus on what matters most—caring for patients.</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li><strong>Patient Admission Optimization:</strong> Assign hospital beds and rooms to patients based on their condition and care requirements.</li>
-                <li><strong>Doctor Scheduling:</strong> Assign doctors to patients or departments based on specialization and workload to minimize waiting times.</li>
-                <li><strong>Emergency Room Response:</strong> Calculate the fastest routes for ambulances and emergency personnel, factoring in traffic and distance.</li>
-                <li><strong>Resource Allocation:</strong> Efficiently distribute medical supplies based on demand and usage patterns.</li>
-            </ul>
-            <p><strong>Team Members:</strong> Parth Patil, Mayur Marathe, Shraddha Chougula, Anup Dundur</p>
-            <p><a href="daacure-details.html" class="button">Read More About DaaCure</a></p>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" data-aos="fade-up">
-            <h2>Contact Me</h2>
+        <section id="contact" data-aos="fade-up" tabindex="0">
+            <h2>Contact</h2>
             <p>If you'd like to collaborate or learn more, feel free to reach out:</p>
             <ul>
-                <li><a href="mailto:parth.patil2005@gmail.com"><i class="fas fa-envelope"></i> parth.patil2005@gmail.com</a></li>
-                <li><a href="https://github.com/ParthPatil2101" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/parth-patil-0876602b3" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="mailto:parth.patil2005@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
             </ul>
         </section>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2025 Parth Patil. All Rights Reserved.</p>
     </footer>
 
-    <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
