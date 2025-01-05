@@ -14,6 +14,7 @@ body {
   padding: 0;
 }
 
+/* Header Styling */
 header {
   background: linear-gradient(90deg, #007BFF, #00d4ff);
   color: white;
@@ -28,14 +29,47 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
+  margin-top: 5px;
 }
 
+/* Navigation Bar Styling */
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #00d4ff;
+  border-radius: 5px;
+}
+
+/* Container Styling */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 20px auto;
 }
 
+/* Section Styling */
 section {
   margin-bottom: 30px;
   background: white;
@@ -83,6 +117,7 @@ table td:first-child {
   color: #007BFF;
 }
 
+/* Links Styling */
 a {
   color: #007BFF;
   text-decoration: none;
@@ -93,6 +128,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer Styling */
 footer {
   background: #007BFF;
   color: white;
@@ -105,7 +141,7 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Button Style */
+/* Button Styling */
 button {
   background: linear-gradient(90deg, #007BFF, #00d4ff);
   border: none;
@@ -120,4 +156,44 @@ button {
 
 button:hover {
   background: linear-gradient(90deg, #0056b3, #0077d9);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ensure footer sticks to the bottom of short content */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
 }
