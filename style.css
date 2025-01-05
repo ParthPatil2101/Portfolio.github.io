@@ -51,3 +51,30 @@ footer {
   color: white;
   margin-top: 20px;
 }
+#portfolio-topic {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+#portfolio-topic table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#portfolio-topic td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#portfolio-topic td:first-child {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+#portfolio-topic h2 {
+  color: #007BFF;
+}
+
