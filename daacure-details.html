@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaaCure – Detailed Project Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>DaaCure – Hospital Management System</h1>
+        <p>Detailed Project Information</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Back to Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <section id="patient-admission">
+            <h2>Subproblem 1: Patient Admission Optimization</h2>
+            <h3>Problem Overview</h3>
+            <p>The goal here is to manage the allocation of hospital rooms or beds to patients, making sure that the patients who need immediate care get it as soon as possible while making efficient use of hospital resources.</p>
+
+            <h3>Algorithms Used</h3>
+            <h4>Greedy Algorithm:</h4>
+            <p><strong>Description:</strong> The greedy algorithm makes the locally optimal choice at each step. It ensures resources are allocated in a way that minimizes waiting time.</p>
+            <p><strong>Why Greedy:</strong> A greedy algorithm works well because it ensures that at any point in time, resources are assigned optimally.</p>
+            <h4>Dynamic Programming (Knapsack Problem):</h4>
+            <p><strong>Description:</strong> Dynamic programming ensures an optimal allocation of limited resources while considering multiple constraints.</p>
+
+            <h3>Data Structures Used</h3>
+            <p><strong>Heap/Priority Queue:</strong> Used to manage patient priorities and ensure efficient allocation of resources.</p>
+            <p><strong>2D Arrays:</strong> Represent the availability of rooms/beds to make the allocation decision efficiently.</p>
+        </section>
+
+        <section id="doctor-scheduling">
+            <h2>Subproblem 2: Doctor Scheduling</h2>
+            <h3>Problem Overview</h3>
+            <p>The task is to allocate doctors to patients or departments based on their specialization and current workload, ensuring no doctor is overburdened and all patients receive care promptly.</p>
+
+            <h3>Algorithms Used</h3>
+            <h4>Bipartite Graph Matching:</h4>
+            <p><strong>Description:</strong> The relationship between doctors and patients is modeled as a bipartite graph, ensuring that doctors are matched to patients based on specialization.</p>
+            <h4>Hungarian Algorithm:</h4>
+            <p><strong>Description:</strong> Minimizes the total workload and optimizes doctor-patient assignments.</p>
+
+            <h3>Data Structures Used</h3>
+            <p><strong>Adjacency Matrix:</strong> Represents the bipartite graph for matching.</p>
+            <p><strong>Queue/Hash Map:</strong> Used to track doctor availability and patient needs.</p>
+        </section>
+
+        <section id="emergency-response">
+            <h2>Subproblem 3: Emergency Room Response</h2>
+            <h3>Problem Overview</h3>
+            <p>The task is to minimize response times in emergencies by optimizing the route that ambulances or emergency personnel take to reach patients.</p>
+
+            <h3>Algorithms Used</h3>
+            <h4>Dijkstra’s Algorithm:</h4>
+            <p><strong>Description:</strong> Finds the shortest path in a weighted graph, optimizing ambulance routing.</p>
+            <h4>A* Search Algorithm:</h4>
+            <p><strong>Description:</strong> A more efficient version of Dijkstra's algorithm that incorporates real-time data.</p>
+
+            <h3>Data Structures Used</h3>
+            <p><strong>Graph (Adjacency List):</strong> Represents the road network.</p>
+            <p><strong>Priority Queue:</strong> Efficiently selects the next node to visit in the pathfinding algorithm.</p>
+        </section>
+
+        <section id="resource-allocation">
+            <h2>Subproblem 4: Resource Allocation</h2>
+            <h3>Problem Overview</h3>
+            <p>This subproblem focuses on distributing limited medical resources, such as oxygen cylinders or surgical tools, to different departments based on demand.</p>
+
+            <h3>Algorithms Used</h3>
+            <h4>Dynamic Programming (Knapsack Problem):</h4>
+            <p><strong>Description:</strong> Maximizes the utility of resource allocation based on department needs.</p>
+            <h4>Ford-Fulkerson Algorithm (Max Flow):</h4>
+            <p><strong>Description:</strong> Optimizes the flow of resources to departments.</p>
+
+            <h3>Data Structures Used</h3>
+            <p><strong>Graph (Adjacency Matrix):</strong> Represents departments and resource flow.</p>
+            <p><strong>Arrays:</strong> Used to track resource availability and demand.</p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Parth Patil. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
