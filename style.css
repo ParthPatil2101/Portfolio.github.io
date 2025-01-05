@@ -12,63 +12,80 @@ body {
   background: #f7f9fc;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
-header.hero {
+/* Header Styling */
+header {
   background: linear-gradient(90deg, #007BFF, #00d4ff);
   color: white;
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
-header.hero img.hero-img {
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-header p.lead {
+header p {
   font-size: 1.2rem;
   margin-top: 5px;
 }
 
+/* Navigation Bar Styling */
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #00d4ff;
+  border-radius: 5px;
+}
+
+/* Container Styling */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 20px auto;
 }
 
+/* Section Styling */
 section {
   margin-bottom: 30px;
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-section:hover {
-  transform: scale(1.02);
 }
 
 section h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #007BFF;
   margin-bottom: 15px;
   text-align: center;
 }
 
-section p, section ul {
+section p {
   font-size: 1rem;
   color: #555;
   margin-bottom: 15px;
@@ -84,36 +101,23 @@ ul li {
   margin-bottom: 10px;
 }
 
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.project-card {
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
+table {
   width: 100%;
-  max-width: 280px;
-  text-align: center;
+  border-collapse: collapse;
+  margin: 10px 0;
 }
 
-.project-card img.project-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-top: 10px;
+table td:first-child {
+  font-weight: bold;
   color: #007BFF;
 }
 
+/* Links Styling */
 a {
   color: #007BFF;
   text-decoration: none;
@@ -124,6 +128,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer Styling */
 footer {
   background: #007BFF;
   color: white;
@@ -136,6 +141,7 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* Button Styling */
 button {
   background: linear-gradient(90deg, #007BFF, #00d4ff);
   border: none;
@@ -152,12 +158,42 @@ button:hover {
   background: linear-gradient(90deg, #0056b3, #0077d9);
 }
 
-/* Accessibility: Improve color contrast for readability */
-body, section, footer {
-  color: #333; /* Darker text for better contrast */
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
 }
 
-/* Focus Styles for Keyboard Navigation */
-a:focus, button:focus, h2:focus {
-  outline: 3px solid #00d4ff;
+/* Ensure footer sticks to the bottom of short content */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
 }
