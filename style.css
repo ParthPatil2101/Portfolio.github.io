@@ -20,10 +20,14 @@ body {
 /* Header Styling */
 header {
   position: relative;
-  background: url('background.jpg') no-repeat center center/cover; /* Replace with your image path */
+  background: url('background.jpg') no-repeat center center/cover; /* Ensure correct image path */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
   color: white;
   padding: 60px 20px;
   text-align: center;
+  height: 100vh; /* Set the height of the header to full screen */
+  background-size: cover; /* Ensures the image covers the entire header */
+  background-position: center; /* Centers the image */
 }
 
 header::before {
@@ -33,7 +37,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 123, 255, 0.85); /* Dark overlay for better text contrast */
+  background: rgba(0, 123, 255, 0.6); /* Adjusted opacity for better text contrast */
   z-index: 1;
 }
 
