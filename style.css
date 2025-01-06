@@ -12,14 +12,34 @@ body {
   background: #f7f9fc;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header Styling */
 header {
-  background: linear-gradient(90deg, #007BFF, #00d4ff);
+  position: relative;
+  background: url('background.jpg') no-repeat center center/cover; /* Replace with your background image URL */
   color: white;
-  padding: 20px 0;
+  padding: 50px 20px;
   text-align: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.8);
+  z-index: 1;
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 2;
 }
 
 header h1 {
@@ -46,6 +66,7 @@ nav ul {
 }
 
 nav ul li {
+  position: relative;
   margin-right: 20px;
 }
 
@@ -60,6 +81,36 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #00d4ff;
   border-radius: 5px;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+}
+
+nav ul li ul li a {
+  padding: 10px 15px;
+  display: block;
+}
+
+nav ul li ul li a:hover {
+  background-color: #00d4ff;
 }
 
 /* Container Styling */
@@ -91,30 +142,19 @@ section p {
   margin-bottom: 15px;
 }
 
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  color: #555;
+/* Home Section with Profile Picture */
+#home {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-ul li {
-  margin-bottom: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 10px 0;
-}
-
-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-table td:first-child {
-  font-weight: bold;
-  color: #007BFF;
+#home img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Links Styling */
@@ -134,7 +174,7 @@ footer {
   color: white;
   text-align: center;
   padding: 15px 0;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 footer p {
@@ -142,19 +182,20 @@ footer p {
 }
 
 /* Button Styling */
-button {
+.button {
+  display: inline-block;
   background: linear-gradient(90deg, #007BFF, #00d4ff);
-  border: none;
   color: white;
   padding: 10px 20px;
-  margin: 10px 0;
   font-size: 1rem;
   border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-button:hover {
+.button:hover {
   background: linear-gradient(90deg, #0056b3, #0077d9);
 }
 
@@ -185,15 +226,4 @@ button:hover {
   footer p {
     font-size: 0.8rem;
   }
-}
-
-/* Ensure footer sticks to the bottom of short content */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-footer {
-  margin-top: auto;
 }
